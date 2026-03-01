@@ -10,15 +10,15 @@
     <form action="formulario.php">
         <p>
             aluno:
-            <input type="text" name="aluno" id="inaluno">
+            <input type="text" name="aluno" id="inaluno" required>
         </p>
         <p>
             nota 1:
-            <input type="number" name="nota1" id="innota1" min="0" max="10" step="0.5">
+            <input type="number" name="nota1" id="innota1" min="0" max="10" step="0.1" required>
         </p>
         <p>
             nota 2: 
-            <input type="number" name="nota2" id="innota2">
+            <input type="number" name="nota2" id="innota2" min="0" max="10" step="0.1" required>
         </p>
         <p>
             <input type="submit" value="Exibir Média e Situação">

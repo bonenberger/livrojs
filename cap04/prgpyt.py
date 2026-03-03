@@ -1,0 +1,1 @@
+nome = str(prompt('qual o seu nome? '))

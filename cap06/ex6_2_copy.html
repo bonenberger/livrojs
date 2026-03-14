@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>exemplo 6.2 tentativa solo</title>
+    <link rel="shortcut icon" href="img/livrojs.png" type="image/x-icon">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <img src="img/ex6_2.jpg" alt="imagem números" class="alta">
+    <h1>jogo descubra o número</h1>
+    <form action="#">
+        <p>
+            chances: 
+            <input type="number" name="chances" id="inchances" min="1" max="10" required>
+        </p>
+        <p>
+            número:
+            <input type="number" name="numero" id="innumero" min="0" max="100" required autofocus>
+            <input type="submit" value="Apostar" id="btapostar">
+            <input type="button" value="Jogar novamente" id="btnovo" class="oculta">
+        </p>
+    </form>
+    <h3>
+        Erros: 
+        <span id="outerros">0</span>
+    </h3>
+    <h3>
+        Chances: 
+        <span id="outchances">6</span>
+    </h3>
+    <h3 id="outdicas" class="italico">
+        Dica: é um número entre 1 e 100.
+    </h3>
+    <script src="js/ex6_2_copy.js"></script>
+</body>
+</html>

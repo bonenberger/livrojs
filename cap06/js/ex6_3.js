@@ -1,0 +1,56 @@
+const frm = document.querySelector('form')
+const resp = document.querySelector('pre')
+let carros = []
+
+frm.addEventListener('submit', (e) => {
+    e.preventDefault()
+    const modelo = frm.inmodelo.value
+    const preco = Number(frm.inpreco.value)
+    carros.push({modelo, preco})
+    frm.inmodelo.value = ''
+    frm.inpreco.value = ''
+    frm.inmodelo.focus()
+    frm.btlistar.dispatchEvent(new Event('click'))
+})
+
+frm.btlistar.addEventListener('click', () => {
+    if (carros.length == 0) {
+        alert('não há carros na lista')
+        return
+    }
+    const lista = carros.reduce((acumulador, carro) => acumulador + carro.modelo + " - R$" + carro.preco.toFixed(2).replace('.',',') + "\n", "")
+    resp.innerText = `lista dos carros cadastrados\n${'-'.repeat(40)}\n${lista}`
+
+})
+
+frm.btfiltrar.addEventListener('click', () => {
+    const maximo = Number(prompt("qual o valor máximo que o cliente deseja pagar?"))
+    if (maximo == 0 || isNaN(maximo)) {
+        return
+    }
+    const carrosFilter = carros.filter(carro => carro.preco <= maximo)
+    if (carrosFilter.length == 0) {
+        alert('não há carros com preço inferior ou igual ao solicitado')
+        return
+    }
+    let lista = ""
+    for (const carro of carrosFilter) {
+        lista += `${carro.modelo} - R$: ${carro.preco.toFixed(2).replace('.', ',')}\n`
+    }
+    resp.innerText = `Carros até R$ ${maximo.toFixed(2).replace('.', ',')}\n${"-".repeat(40)}\n${lista}`
+})
+
+frm.btsimular.addEventListener('click', () => {
+    const desconto = Number(prompt('qual o percentual de desconto'))
+    if (desconto == 0 || isNaN(desconto)) {
+        return
+    }
+    const carrosDesc = carros.map(aux => ({
+        modelo:aux.modelo, preco:aux.preco - (aux.preco*desconto/100)
+    }))
+    let lista = ''
+    for(const carro of carrosDesc) {
+        lista+= `${carro.modelo} - R$: ${carro.preco.toFixed(2).replace('.', ',')}\n`
+    }
+    resp.innerText = `Carros com desconto: ${desconto}%\n${'-'.repeat(40)}\n${lista}`
+})

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>formulário de cadastro</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <h1>cadastro médico</h1>
+    <form>
+        <p>
+            <input placeholder="crm" type="number" name="crm" id="incrm" required autofocus>
+        </p>
+        <p>
+            <input placeholder="nome" type="text" name="nome" id="innome" required>
+        </p>
+        <p>
+            <input placeholder="endereço" type="text" name="endereco" id="inendereco">
+        </p>
+        <p>
+            <input placeholder="telefone" type="tel" name="telefone" id="intelefone">
+        </p>
+        <p>
+            <input placeholder="cidade" type="text" name="cidade" id="incidade">
+        </p>
+        <p>
+            <select name="especialidade" id="inespecialidade">
+                <option value="cardiologia">Cardiologia</option>
+                <option value="clínica geral">Clínica Geral</option>
+                <option value="psiquiatria">Psiquiatria</option>
+                <option value="neurologia">Neurologia</option>
+                <option value="ortopedia">Ortopedia</option>
+                <option value="reumatologia">Reumatologia</option>
+                <option value="nefrologia">Nefrologia</option>
+            </select>
+        </p>
+        <p>
+            <input type="submit" value="Cadastrar" id="btcadastrar">
+            <input type="button" value="Limpar" id="btlimpar">
+            <input type="button" value="Listar" id="btlistar">
+        </p>
+    </form>
+    <pre>
+
+    </pre>
+    <script src="js/cadastro-pessoas.js"></script>
+</body>
+</html>

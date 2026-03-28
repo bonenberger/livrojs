@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>aprovados</title>
+</head>
+<body>
+    <h1>Lista dos aprovados para a 2ª fase</h1>
+    <form>
+        <p>
+            <label for="innome">nome: </label>
+            <input type="text" name="nome" id="innome" required autofocus>
+        </p>
+        <p>
+            <label for="inacertos">acertos: </label>
+            <input type="number" name="acertos" id="inacertos" required min="0" max="100">
+            <input type="submit" value="adicionar">
+        </p>
+        <p>
+            <input type="button" value="listar todos" id="btListar">
+            <input type="button" value="aprovados 2ª etapa" id="btAprovados">
+        </p>
+    </form>
+    <pre>
+
+    </pre>
+    <script src="ex6_c.js"></script>
+</body>
+</html>

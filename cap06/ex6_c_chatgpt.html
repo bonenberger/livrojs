@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Cadastro de Candidatos</title>
+    <link rel="stylesheet" href="css/style_chatgpt.css">
+</head>
+<body>
+
+    <h1>Cadastro de Candidatos</h1>
+
+    <form>
+        <p>
+            <label>Nome:
+                <input type="text" name="innome" required>
+            </label>
+        </p>
+
+        <p>
+            <label>Acertos:
+                <input type="number" name="inacertos" required>
+            </label>
+        </p>
+
+        <button type="submit">Adicionar</button>
+        <button type="button" name="btListar">Listar Todos</button>
+        <button type="button" name="btAprovados">Ver Aprovados</button>
+    </form>
+
+    <hr>
+
+    <table border="1" width="400">
+        <thead>
+            <tr>
+                <th>#</th>
+                <th>Nome</th>
+                <th>Acertos</th>
+            </tr>
+        </thead>
+        <tbody id="tabelaCorpo">
+            <tr>
+                <td colspan="3">Nenhum candidato cadastrado</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <script src="app.js"></script>
+</body>
+</html>

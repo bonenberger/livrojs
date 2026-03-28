@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nº de palavras</title>
+</head>
+<body>
+    <script>
+        const anuncio = prompt("anúncio: ")
+        let numPalavras = 0
+        const tam = anuncio.length
+        for (let i = 0; i < tam; i++) {
+            if (anuncio.charAt(i) == '') {
+                numPalavras ++
+            }
+        }
+        alert(`anúncio: ${anuncio}\nNº de palavras: ${numPalavras + 1}`)
+        
+    </script>
+</body>
+</html>
